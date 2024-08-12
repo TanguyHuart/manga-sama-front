@@ -1,0 +1,120 @@
+@use '../../styles/variables' as V;
+
+.user-info {
+  &__main_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 1rem;
+  }
+  &__top_container {
+    background-image: url('/assets/icons/bg3.png'); /* Replace 'path/to/your/image.jpg' with the actual path to your image file */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: V.$font-color-dark-bg;
+    font-family: V.$main-font;
+    width: 20rem;
+    border-radius: 20px;
+    @media screen and (min-width: 1150px) {
+      display: flex;
+      width: 50rem;
+      padding: 50px;
+    }
+    &-credentials {
+      background: rgba(255, 255, 255, 0.22);
+      border-radius: 16px;
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(8.6px);
+      -webkit-backdrop-filter: blur(8.6px);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-evenly;
+      padding: 10px;
+      font-size: 20px;
+      font-weight: bold;
+      color: black;
+      margin: 0 auto;
+      padding: 0.5rem 2rem;
+      &-nickname {
+        color: V.$pink-color;
+        font-size: 2rem;
+      }
+      &-city {
+        color: black;
+      }
+    }
+  }
+
+  &__bottom_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    &-title {
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
+    &-articles {
+      &-list {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        margin-top: 2rem;
+        gap: 5rem;
+
+        @media screen and (min-width: 1150px) {
+          width: 100%;
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+      &-item {
+        // background: V.$pink-bg;
+        border: 1px solid whitesmoke;
+        box-shadow: 4px 4px 11px -4px V.$grey-menu;
+        -webkit-box-shadow: 4px 4px 11px -4px V.$grey-menu;
+        -moz-box-shadow: 4px 4px 11px -4px V.$grey-menu;
+        border-radius: 15px;
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 80%;
+        font-size: 1.2rem;
+        @media screen and (min-width: 1150px) {
+          width: 25%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+      &-image {
+        aspect-ratio: 2/3;
+      }
+
+      &-info {
+        &-title {
+          font-weight: bold;
+          text-align: center;
+        }
+        &-price {
+          text-align: center;
+        }
+        &-city {
+          text-align: center;
+        }
+        @media screen and (min-width: 1150px) {
+        }
+      }
+    }
+  }
+}

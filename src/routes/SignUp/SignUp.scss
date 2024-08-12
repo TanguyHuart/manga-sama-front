@@ -1,0 +1,148 @@
+@use '../../styles/variables' as V;
+
+@keyframes anim {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.signUp {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  align-items: center;
+  margin-left: 3rem;
+  width: 100%;
+  margin: 5rem auto;
+  align-items: center;
+
+  @media screen and (min-width: 1050px) {
+    width: 90%;
+    flex-direction: row-reverse;
+  }
+  &__logo-container {
+    display: none;
+    @media screen and (min-width: 1050px) {
+      display: flex;
+      justify-content: center;
+      width: 30%;
+      margin: auto;
+      align-items: center;
+    }
+  }
+
+  &__logo {
+    width: 10rem;
+    margin-bottom: 5rem;
+    @media screen and (min-width: 1050px) {
+      width: 20rem;
+    }
+  }
+
+  &__area {
+    background-image: url('/assets/icons/bg3.png'); /* Replace 'path/to/your/image.jpg' with the actual path to your image file */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    align-items: center;
+    gap: 1rem;
+    margin: 2rem;
+    padding: 2rem;
+    border-radius: 20px;
+
+    @media screen and (min-width: 1050px) {
+      width: 50%;
+    }
+    &-title {
+      font-size: 2rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
+      color: V.$pink-color;
+      text-align: center;
+    }
+    &-form {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      align-items: center;
+    }
+    &-lists {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    &-item {
+      display: flex;
+      flex-direction: column;
+
+      &--label {
+        color: rgb(71, 71, 71);
+        font-size: 0.8rem;
+        padding: 0.2rem 1rem;
+      }
+      &--pseudo {
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+      }
+      &--loader {
+        width: 1.5rem;
+        height: 1.5rem;
+        animation: anim 2s linear 0s infinite normal forwards;
+      }
+
+      &--error {
+        color: red;
+        font-size: 0.8rem;
+      }
+      &--link {
+        color: V.$pink-color;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+    &-item input {
+      border-radius: 10px;
+      background-color: V.$pink-bg;
+      padding: 5px;
+      flex-grow: 1;
+    }
+
+    &-item--email {
+      padding-bottom: 2rem;
+      border-bottom: solid 1px black;
+    }
+
+    &-button {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      color: V.$font-color-dark-bg;
+      font-size: 1.5rem;
+      background-color: V.$pink-color;
+      padding: 0.3rem;
+      border-radius: 10px;
+      width: 180px;
+      transition: transform 0.3s ease;
+      margin-top: 2rem;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+      &-icon {
+        width: 25px;
+      }
+    }
+  }
+}

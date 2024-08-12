@@ -1,0 +1,62 @@
+@use '../../styles/variables' as V;
+
+.Footer {
+  background-color: black;
+  font-family: V.$main-font;
+  color: V.$font-color-dark-bg;
+  width: 100%;
+  font-size: 0.9rem;
+
+  &__top_container {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 3rem;
+    margin: 1rem auto;
+    padding: 1.5rem;
+    font-size: 1.05rem;
+    font-weight: 500;
+    margin-bottom: 3rem;
+
+    @media screen and (min-width: 768px) {
+      width: 35%;
+      display: flex;
+      margin: 1rem auto;
+      justify-content: space-between;
+      font-size: 1rem;
+    }
+  }
+
+  &__list {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    @media screen and (min-width: 768px) {
+      display: flex;
+      margin: auto;
+    }
+  }
+
+  &__list_item {
+    margin-bottom: 1rem;
+    transition: 500ms;
+  }
+
+  &__list_item:hover {
+    margin-bottom: 1rem;
+    color: V.$pink-color;
+  }
+
+  &__bottom_container {
+    text-align: center;
+    color: V.$font-color-dark-bg;
+    font-size: 0.8rem;
+    margin-top: 1rem;
+    padding-bottom: 0.5rem;
+
+    @media screen and (min-width: 768px) {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}

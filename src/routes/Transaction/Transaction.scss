@@ -1,0 +1,129 @@
+@use 'src/styles/_variables.scss' as V;
+
+.transaction {
+  &__area {
+    background-image: url('/assets/icons/bg3.png'); /* Replace 'path/to/your/image.jpg' with the actual path to your image file */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 30px;
+    gap: 20px;
+
+    &-arrowicon {
+      width: 2rem;
+      margin: 0 1rem;
+
+      @media screen and (max-width: 1080px) {
+        transform: rotateZ(90deg);
+      }
+    }
+    &-top {
+      display: flex;
+      margin: 10px;
+      padding: 2rem;
+      align-items: center;
+      justify-content: space-evenly;
+      background: rgba(255, 255, 255, 0.22);
+      border-radius: 16px;
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(8.6px);
+      -webkit-backdrop-filter: blur(8.6px);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      box-shadow: 4px 4px 11px -4px V.$grey-menu;
+      -webkit-box-shadow: 4px 4px 11px -4px V.$grey-menu;
+      -moz-box-shadow: 4px 4px 11px -4px V.$grey-menu;
+      width: 90%;
+      font-family: V.$main-font;
+      font-weight: bold;
+      border-radius: 15px;
+      @media screen and (max-width: 1080px) {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+      }
+
+      &-profile {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        h2 {
+          font-size: 1.3rem;
+          margin-bottom: 1rem;
+        }
+
+        &-img {
+          @media screen and (max-width: 1080px) {
+            width: 9rem;
+            margin-bottom: 1rem;
+          }
+        }
+        &-name {
+          color: V.$pink-color;
+          font-family: V.$secondary-font;
+          font-weight: 500;
+          font-size: 1.5rem;
+        }
+        &-location {
+          font-family: V.$secondary-font;
+          font-weight: 500;
+        }
+      }
+
+      &-title {
+        margin: 10px;
+        font-weight: bold;
+        font-size: 2rem;
+      }
+      &-article {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 20px;
+
+        font-weight: bold;
+        &-image {
+          width: 30%;
+          @media screen and (max-width: 1080px) {
+            width: 9rem;
+          }
+        }
+
+        &-title {
+          font-size: 1.2rem;
+          padding: 0.5rem;
+        }
+
+        &-volume {
+          font-family: V.$secondary-font;
+          font-weight: 500;
+          padding: 0.5rem 0 0 0;
+        }
+
+        &-price {
+          // padding-top: 1rem;
+          color: V.$pink-color;
+          font-size: 1.5rem;
+        }
+      }
+    }
+    &-bottom-button {
+      margin-bottom: 15px;
+      display: flex;
+      justify-content: center;
+      background-color: V.$pink-color;
+      padding: 20px 30px;
+      border-radius: 20px;
+      font-weight: bold;
+      color: V.$font-color-dark-bg;
+      box-shadow: 4px 4px 11px -4px V.$grey-menu;
+      -webkit-box-shadow: 4px 4px 11px -4px V.$grey-menu;
+      -moz-box-shadow: 4px 4px 11px -4px V.$grey-menu;
+    }
+  }
+}

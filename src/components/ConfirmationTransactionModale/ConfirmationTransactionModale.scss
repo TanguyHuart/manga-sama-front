@@ -1,0 +1,50 @@
+@use 'src/styles/_variables.scss' as V;
+
+.transaction__modale {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid V.$pink-color;
+  width: 80vw;
+  z-index: 2;
+  background-color: V.$grey-menu;
+  max-width: 30rem;
+  height: fit-content;
+  color: V.$font-color-dark-bg;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.2rem;
+  box-shadow: 0 5px 5px V.$grey-menu;
+  @media screen and (min-width: 900px) {
+    left: 60%;
+    transform: translate(-60%, -50%);
+  }
+
+  &-warning {
+    font-size: 2rem;
+    text-align: center;
+    font-family: V.$main-font;
+    font-weight: bold;
+  }
+
+  &-content {
+    margin-top: 1rem;
+    font-family: V.$secondary-font;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+  &-btn {
+    margin-top: 0.5rem;
+    font-family: V.$main-font;
+    font-weight: bold;
+    background-color: V.$pink-color;
+    padding: 0.5rem 1rem 0.5rem;
+    font-size: 1.2rem;
+    border-radius: 1rem;
+  }
+}

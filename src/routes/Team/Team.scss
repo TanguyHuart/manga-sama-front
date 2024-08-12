@@ -1,0 +1,61 @@
+@use '../../styles/variables' as V;
+
+.team {
+  @media screen and (min-width: 768px) {
+    margin: 0 4rem;
+    margin-bottom: 4rem;
+  }
+  &__title {
+    font-size: 2rem;
+    text-align: center;
+    color: V.$pink-color;
+    font-weight: bold;
+    padding: 2rem;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin: 0 1rem;
+
+    @media screen and (min-width: 768px) {
+      gap: 2rem;
+    }
+    &-img {
+      width: 4rem;
+
+      @media screen and (min-width: 768px) {
+        width: 10rem;
+      }
+    }
+
+    &-item {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+
+      border-radius: 2rem;
+      padding: 1rem;
+      border: 1px solid whitesmoke;
+      box-shadow: 4px 4px 11px -4px V.$grey-menu;
+      -webkit-box-shadow: 4px 4px 11px -4px V.$grey-menu;
+      -moz-box-shadow: 4px 4px 11px -4px V.$grey-menu;
+
+      @media screen and (min-width: 768px) {
+        gap: 2rem;
+      }
+    }
+
+    &-name {
+      font-size: 1.5rem;
+      font-weight: bold;
+      font-style: italic;
+    }
+
+    &-role {
+      font-weight: 600;
+      font-size: 1.1rem;
+    }
+  }
+}

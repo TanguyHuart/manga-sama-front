@@ -1,0 +1,92 @@
+@use 'src/styles/_variables.scss' as V;
+
+.user-transactions {
+  background-image: url('/assets/icons/bg3.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 15px;
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+
+  @media screen and (min-width: 768px) {
+    width: 70%;
+    margin: 2rem auto;
+  }
+
+  justify-content: center;
+  &__top {
+    &_container {
+      margin: 1.5rem;
+    }
+    &_title {
+      font-family: V.$main-font;
+      font-weight: bold;
+    }
+  }
+  &__main_container {
+    display: flex;
+    flex-direction: column;
+  }
+  &__cards {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 1rem 0;
+    align-items: center;
+
+    &_item {
+      border: 1px solid whitesmoke;
+      box-shadow: 4px 4px 11px -4px V.$grey-menu;
+      -webkit-box-shadow: 4px 4px 11px -4px V.$grey-menu;
+      -moz-box-shadow: 4px 4px 11px -4px V.$grey-menu;
+      background: V.$white-color;
+      border-radius: 10px;
+
+      width: 90%;
+      padding: 0.5rem;
+      font-family: V.$main-font;
+      font-weight: bold;
+      font-size: 0.8rem;
+      @media screen and (min-width: 768px) {
+        width: 85%;
+        font-size: 1rem;
+      }
+
+      &-img {
+        width: 6rem;
+        border-radius: 15px;
+      }
+      &-info {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 0.2rem;
+        @media screen and (min-width: 768px) {
+          gap: 1.5rem;
+        }
+      }
+      &-content {
+        &-price {
+          color: V.$pink-color;
+          font-weight: 800;
+        }
+      }
+      &-state {
+        color: V.$font-color-dark-bg;
+        font-family: V.$main-font;
+        font-weight: bold;
+        font-size: 0.8rem;
+        background: V.$pink-color;
+        padding: 0.4rem 0.4rem;
+        border-radius: 10px;
+
+        @media screen and (min-width: 768px) {
+          padding: 0.4rem 1rem;
+          font-size: 0.9rem;
+        }
+      }
+    }
+  }
+}

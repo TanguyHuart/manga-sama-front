@@ -1,0 +1,33 @@
+@use 'src/styles/_variables.scss' as V;
+
+.dialogError {
+  font-family: V.$main-font;
+  position: fixed;
+  height: fit-content;
+
+  background-color: rgb(221, 181, 181);
+  color: V.$font-color-light-bg;
+  border: solid 2px rgb(255, 0, 0);
+  border-radius: 1rem;
+  padding: 1rem;
+  width: 15rem;
+  top: 5rem;
+  left: 5rem;
+  z-index: 20;
+
+  @media screen and (min-width: 768px) {
+    width: 20rem;
+    top: 5rem;
+    left: 45%;
+  }
+  &__close-btn {
+    position: absolute;
+    transform: rotateZ(45deg);
+    top: 3px;
+    right: 3px;
+    border-radius: 50%;
+    height: 1rem;
+    width: 1rem;
+    background: rgb(255, 0, 0);
+  }
+}

@@ -1,0 +1,24 @@
+@use 'src/styles/_variables.scss' as V;
+
+.home-menuDesktop__user-links {
+  color: V.$font-color-dark-bg;
+  margin-bottom: 300px;
+}
+.home-menuDesktop__user-list {
+  display: flex;
+  font-size: 1.1rem;
+  flex-direction: column;
+  gap: 30px;
+
+  .home-menuDesktop__user-item {
+    display: flex;
+    font-family: V.$main-font;
+    font-weight: bold;
+    transition: color 300ms ease;
+
+    &:hover {
+      color: V.$pink-color;
+      cursor: pointer;
+    }
+  }
+}

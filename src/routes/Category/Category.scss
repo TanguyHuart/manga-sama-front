@@ -1,0 +1,95 @@
+@use '../../styles/variables' as V;
+
+.category {
+  &__articles {
+    display: flex;
+    flex-direction: column;
+    &-title-area {
+      padding: 10px;
+    }
+    &-title {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      justify-content: center;
+      font-family: V.$secondary-font;
+      font-weight: bold;
+      @media screen and (min-width: 768px) {
+        font-size: 30px;
+        align-items: center;
+      }
+      &-icon {
+        width: 20px;
+        @media screen and (min-width: 768px) {
+          width: 25px;
+        }
+      }
+    }
+    &-area {
+      min-height: 25rem;
+    }
+    &-noarticles {
+      color: V.$pink-color;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    &-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+    }
+    &-item {
+      border: 1px solid whitesmoke;
+      box-shadow: 4px 4px 11px -4px V.$grey-menu;
+      -webkit-box-shadow: 4px 4px 11px -4px V.$grey-menu;
+      -moz-box-shadow: 4px 4px 11px -4px V.$grey-menu;
+      display: flex;
+
+      flex-direction: column;
+
+      border-radius: 10px;
+      width: 60vw;
+      margin-bottom: 20px;
+      @media screen and (min-width: 768px) {
+        width: 20vw;
+        margin-bottom: 60px;
+        padding: 10px;
+        margin: 30px;
+      }
+
+      &-image {
+        aspect-ratio: 2/3;
+      }
+    }
+    &-info {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      font-family: V.$secondary-font;
+
+      // font-weight: 500;
+      &-title {
+        font-weight: 500;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        max-width: 40ch;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+        width: 100%;
+      }
+      &-price {
+        color: V.$pink-color;
+        font-weight: bold;
+      }
+      &-localisation {
+        font-size: 0.8rem;
+        color: V.$gray-icon;
+      }
+    }
+  }
+}

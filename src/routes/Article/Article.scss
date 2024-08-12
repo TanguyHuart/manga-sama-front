@@ -1,0 +1,159 @@
+@use '../../styles/variables' as V;
+
+.Article {
+  width: 95%;
+  // background-color: V.$pink-bg;
+  border: 1px solid whitesmoke;
+  box-shadow: 4px 4px 11px -4px V.$grey-menu;
+  -webkit-box-shadow: 4px 4px 11px -4px V.$grey-menu;
+  -moz-box-shadow: 4px 4px 11px -4px V.$grey-menu;
+  margin: 1.5rem auto;
+  border-radius: 15px;
+  padding: 1rem;
+  font-family: V.$main-font;
+  @media screen and (min-width: 1000px) {
+    width: 50rem;
+  }
+  @media screen and (min-width: 1500px) {
+    width: 80rem;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+
+    &_manga {
+      &-info {
+        margin: 1rem 0;
+        @media screen and (min-width: 768px) {
+          font-size: 1.3rem;
+        }
+      }
+      &-title {
+        display: flex;
+        flex-direction: column;
+        margin: 0rem 2rem 0 0;
+        justify-content: center;
+        align-items: flex-start;
+        font-weight: bold;
+      }
+    }
+
+    &_main {
+      @media screen and (min-width: 1000px) {
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+      }
+    }
+
+    &_title {
+      margin: 0 auto 0.3rem;
+      font-family: V.$main-font;
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
+
+    &_img {
+      // width: 65%;
+      margin: 0 auto;
+
+      @media screen and (min-width: 768px) {
+        flex-direction: row;
+
+        margin: 0;
+      }
+    }
+    &_info {
+      margin-right: 1rem;
+      width: 20rem;
+    }
+
+    &_price {
+      font-weight: bold;
+      color: V.$pink-color;
+      font-size: 1.8rem;
+      margin: 0 auto 0.5rem;
+    }
+
+    &_description {
+      @media screen and (min-width: 768px) {
+        font-size: 1.5rem;
+      }
+
+      &-title {
+        font-family: V.$main-font;
+        font-weight: bold;
+        margin: 1rem 0 0;
+      }
+      &-content {
+        font-family: V.$secondary-font;
+        @media screen and (min-width: 768px) {
+          font-size: 1.4rem;
+        }
+      }
+    }
+    &_state {
+      @media screen and (min-width: 768px) {
+        font-size: 1.5rem;
+      }
+
+      &-title {
+        font-family: V.$main-font;
+        font-weight: bold;
+        margin: 1rem 0 0;
+      }
+      &-content {
+        font-family: V.$secondary-font;
+        @media screen and (min-width: 768px) {
+          font-size: 1.3rem;
+        }
+      }
+    }
+
+    &_soldby {
+      display: flex;
+      @media screen and (min-width: 768px) {
+        font-size: 1.5rem;
+      }
+      &-content {
+        font-family: V.$main-font;
+        font-weight: bold;
+        margin: 1rem 0 0;
+        @media screen and (min-width: 768px) {
+          font-size: 1.3rem;
+        }
+      }
+      &-name {
+        color: V.$pink-color;
+        text-decoration: underline;
+      }
+    }
+
+    &_info {
+      &-localisation {
+        margin-top: 1rem;
+        font-size: 1rem;
+        color: rgb(51, 51, 51);
+      }
+    }
+  }
+  &__purchase_btn {
+    font-family: V.$main-font;
+    font-weight: bold;
+    font-size: 1.75rem;
+    margin: 1rem auto;
+    border-radius: 20px;
+    background: V.$pink-color;
+    padding: 0.5rem 1rem;
+    color: white;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    display: flex;
+    @media screen and (min-width: 600px) {
+      margin-top: 3rem;
+    }
+  }
+}

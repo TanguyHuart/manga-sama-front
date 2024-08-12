@@ -1,0 +1,113 @@
+@use '../../styles/variables' as V;
+
+body {
+  overflow-x: hidden;
+}
+
+.CreateArticle {
+  &__title {
+    font-family: V.$main-font;
+    font-weight: bold;
+    font-size: 1.3rem;
+    text-align: center;
+
+    @media screen and (min-width: 768px) {
+      font-size: 1.8rem;
+    }
+  }
+  &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+    margin: 1.5rem auto;
+    font-weight: bold;
+    @media screen and (min-width: 600px) {
+      flex-direction: row;
+      width: 100%;
+    }
+
+    &_left {
+      @media screen and (min-width: 768px) {
+        width: 50%;
+      }
+      img {
+        margin: 0 auto;
+        width: 350px;
+        // height: 50vh;
+      }
+    }
+    &_right {
+      @media screen and (min-width: 768px) {
+        width: 30%;
+      }
+    }
+  }
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    font-size: 0.9rem;
+    background-image: url('/assets/icons/bg3.png'); /* Replace 'path/to/your/image.jpg' with the actual path to your image file */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 2rem;
+    border-radius: 15px;
+
+    &-addMangaButton {
+      background-color: V.$pink-color;
+      padding: 0.3rem;
+      margin: 1rem auto;
+      color: V.$font-color-dark-bg;
+      border-radius: 1rem;
+      width: 50%;
+      @media screen and (min-width: 500px) {
+        width: 50%;
+      }
+    }
+    &-mangaListItem {
+      color: V.$dark-grey;
+    }
+    &_label {
+      font-family: V.$main-font;
+      font-weight: bold;
+      margin-top: 0.9rem;
+    }
+
+    &_input {
+      background: V.$white-color;
+      padding: 0.5rem 0.7rem;
+      border-radius: 15px;
+      font-family: V.$secondary-font;
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: V.$dark-grey;
+    }
+
+    &_btn {
+      background: V.$pink-color;
+      font-family: V.$main-font;
+      font-weight: bold;
+      font-size: 0.8rem;
+      gap: 1rem;
+      color: V.$font-color-dark-bg;
+      padding: 0.3rem;
+      border-radius: 15px;
+      margin: 2rem auto 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 60%;
+      @media screen and (min-width: 500px) {
+        gap: 0.5rem;
+        padding: 0.5rem 0.7rem;
+        margin: 2rem auto;
+      }
+    }
+
+    &_btn img {
+      width: 28px;
+    }
+  }
+}

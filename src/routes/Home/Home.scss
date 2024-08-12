@@ -1,0 +1,96 @@
+@use '../../styles/variables' as V;
+
+.home {
+  &__articles {
+    display: flex;
+    flex-direction: column;
+    &-title-area {
+      padding: 10px;
+    }
+    &-title {
+      font-family: V.$main-font;
+      font-size: 1.5rem;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      @media screen and (min-width: 768px) {
+        font-size: 30px;
+        align-items: center;
+      }
+      &-icon {
+        width: 20px;
+        @media screen and (min-width: 768px) {
+          width: 25px;
+        }
+      }
+    }
+
+    &-area {
+      min-height: 25rem;
+    }
+    &-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+    }
+    &-item {
+      border: 1px solid whitesmoke;
+      box-shadow: 4px 4px 11px -4px V.$grey-menu;
+      -webkit-box-shadow: 4px 4px 11px -4px V.$grey-menu;
+      -moz-box-shadow: 4px 4px 11px -4px V.$grey-menu;
+      display: flex;
+      flex-direction: column;
+      padding-bottom: 0.5rem;
+      border-radius: 10px;
+      width: 60vw;
+
+      height: fit-content;
+      margin-bottom: 20px;
+
+      @media screen and (min-width: 768px) {
+        width: 20vw;
+        margin-bottom: 60px;
+        padding: 10px;
+        margin: 30px;
+      }
+
+      &-image {
+        aspect-ratio: 2/3;
+      }
+    }
+    &-info {
+      // display: flex;
+      // flex-direction: column;
+      // align-items: center;
+      text-align: center;
+      &-title {
+        font-weight: 500;
+
+        // justify-content: center;
+        // align-items: center;
+        text-align: center;
+        font-family: V.$main-font;
+        font-weight: bold;
+        max-width: 40ch;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+        padding: 0.5rem;
+      }
+      &-price {
+        color: V.$pink-color;
+        font-size: 1rem;
+        font-weight: bold;
+        font-family: V.$main-font;
+        font-weight: bold;
+      }
+      &-localisation {
+        font-size: 0.9rem;
+        color: V.$gray-icon;
+        font-family: V.$secondary-font;
+      }
+    }
+  }
+}

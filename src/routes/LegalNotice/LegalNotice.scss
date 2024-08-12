@@ -1,0 +1,32 @@
+@use '../../styles/variables' as V;
+
+.legalNotice {
+  margin: 0 4rem 4rem 4rem;
+  font-size: 1.3rem;
+
+  &__title {
+    font-size: 2rem;
+    text-align: center;
+    color: V.$pink-color;
+    font-weight: bold;
+    padding: 2rem;
+  }
+
+  &__link {
+    color: V.$pink-color;
+  }
+
+  & h2 {
+    font-weight: bold;
+    padding: 1.5rem;
+  }
+
+  &__content {
+    font-size: 1rem;
+    padding: 1.5rem;
+
+    @media screen and (min-width: 768px) {
+      font-size: 1.3rem;
+    }
+  }
+}
