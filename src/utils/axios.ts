@@ -6,7 +6,7 @@ import { LocalStorage } from './LocalStorage';
 // On créer une instance d'axios.
 // Cela permet de spécifier une configuration pour toutes les requêtes effectuées avec cette instance
 export const axiosInstance = axios.create({
-  baseURL: 'https://manga-samas.onrender.com/',
+  baseURL: 'http://manga-sama-back-production.up.railway.app',
 });
 // Je rajoute un intercepteur, cela me permet avant que la requête soit faite de modifier la configuration
 axiosInstance.interceptors.request.use((config) => {
